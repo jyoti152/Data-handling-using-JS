@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+        crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="task_1.js"></script>
+    <script src="task2.js"></script>
+    
+    <style>
+        ul {
+            list-style-type: none;
+            list-style-position: initial;
+            padding: 70px;
+            padding-block-start: 0%;
+            text-align: left;
+            margin-top: 0%;
+        }
+
+        li {
+
+            float: left;
+            margin: 0%;
+            padding: 20px;
+            text-align: left
+        }
+
+        li i {
+            display: table;
+            margin-top: 0%;
+            font-family: cursive;
+            font-size: 30px;
+            align-self: initial;
+            text-align: left
+        }
+
+        li a:hover:not(.active) {
+            background-color: pink;
+        }
+
+        li a.active {
+            color: white;
+            background-color: #4CAF50;
+            margin: 0%
+        }
+
+        i:hover ,
+        i.selected{
+            background-color: #666;
+            color: aqua;
+            
+
+        }
+        i:active {
+  background-color:rgb(127, 127, 245);
+  font-size: 150%;
+}
+i:link, i:visited, i:focus {
+  background:blue;
+}
+
+#nav1{
+    overflow:auto;
+    background-color: rgb(2, 54, 5);
+}
+.nav1 a{
+    margin-left: 300px;
+    float: right;
+    padding: 10px;
+    text-align: center;
+    text-decoration:none;
+    font-size: auto;
+    color: bisque;
+   
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 54, 5);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body onload="disp()">
+    
+    <div class="sidenav" style="width:15%;overflow:scroll;text-align:left;">
+        
+        <p style="font-size:30px;font-family:Aria, Helvetica, sans-serif;color:rgb(196, 219, 197)">
+            <b>&nbsp;MENU</b>
+        </p>
+
+        <ul>
+            <li>
+                <i class="fa fa-list" id="name" style="font-size:48px;color:white" onclick="name()"></i>
+            </li>
+            <li>
+                <i class="fa fa-list-ol" style="font-size:48px;color:white" onclick="sortyr()"></i>
+            </li>
+            <li>
+                
+                    <i class='fas fa-arrow-alt-circle-up' style='font-size:48px;color:white' onclick="ascast()"></i>
+                    <li>
+                        <i class='fas fa-arrow-circle-down' style='font-size:48px;color:white' onclick="descast()"></i>
+                    </li>
+                               <li>  <i class='far fa-user' style='font-size:48px;color:white' onclick="sortA()"></i></li>
+      
+                     <li>  <i class='fas fa-music' style='font-size:48px;color:white' onclick="genre()"></i>
+            
+                            
+                            </ul>
+
+    </div>
+    <div id="nav1" class="nav1" style="margin-bottom:50px;">
+
+            <a>      <select id="example_select" onchange="filter(this[selectedIndex].text)" style="width:500px;height:20px;">
+                    <option>Select cast</option> </select>
+                </a>
+      
+<a>          <select name="min" id="d1" style="width:150px;height:20px;">
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+
+    </select>
+    <select name="min" id="d2" style="width:150px;height:20px;">
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+
+    </select>
+    &nbsp;
+    <i class='fas fa-search' style='font-size:20px;color:white;' onclick="year1(d1,d2)"></i>
+                                                 
+  </a>
+        </div>
+
+    <div id="nav" style="margin-left:320px;margin-right:20px;">
+            <table border="1">
+
+
+    </div>
+    
+       
+</body>
+
+</html>
